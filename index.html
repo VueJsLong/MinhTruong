@@ -5,17 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
+      rel="shortcut icon"
+      type="image/png"
+      href="/assets/img/favicon.png"
+      id="favicon"
+    />
+    <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/common.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
     <title>Minh Truong Edu</title>
   </head>
 
   <body>
-    <div id="app">
+    <div id="app" class="--background-gray">
       <div id="main"></div>
     </div>
 
@@ -41,8 +48,8 @@
         mounted() {},
         template: `
           <div class="d-flex flex-column justify-content-center align-items-center h-100">
-            <h1 class="text-center">Đây sẽ là nơi cậu Long xây dựng một ứng dụng nho nhỏ giúp Trường học Toán và Tiếng Anh</h1>
-            <h2> Ứng dụng đang trong quá trình thực hiện</h2>
+            <h1 class="text-center heading">Đây sẽ là nơi cậu Long xây dựng một ứng dụng nho nhỏ <br> giúp Trường học Toán và Tiếng Anh</h1>
+            <h2 class="comment --separate-top p-4"> Ứng dụng đang trong quá trình thực hiện</h2>
           </div>
           `,
       })
