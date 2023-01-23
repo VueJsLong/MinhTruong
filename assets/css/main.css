@@ -1,0 +1,42 @@
+/* ∞∞ font ∞∞ */
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,900);
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* global */
+* {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-color: inherit;
+}
+
+
+/* common */
+.m-icon {
+  padding: 4px 8px;
+}
+
+.m-icon:hover {
+  cursor: pointer;
+  color: #fff;
+}
+
+/* responsive breakpoint */
+/* [0; 740) mobile
+[740; 1024) Tablet and Low PC
+[1113; 1240) Medium PC */
+/* Mobile */
+@media (max-width: 740px) {}
+
+/* >= Tablet */
+@media (min-width: 740px) {}
+
+/* > PC medium resolution  */
+@media (min-width: 1113px) {}
+
+/* > PC low resolution */
+@media (min-width: 1024px) and (max-width: 1239px) {}
