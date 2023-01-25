@@ -1,21 +1,137 @@
 /* ∞∞ font ∞∞ */
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,900);
 
-body {
-  font-family: 'Roboto', sans-serif;
+/* global */
+:root {
+  --main-color: #01A38A;
+  --main-color-900: #00201B;
+  --main-color-800: #004137;
+  --main-color-700: #016253;
+  --main-color-600: #01836F;
+  --main-color-400: #34B6A2;
+  --main-color-300: #67C8B9;
+  --main-color-200: #99DAD0;
+  --main-color-100: #CCECE7;
+  --main-color-50: #E6F6F3;
+
+  --wcag-title-color: #000000;
+  --wcag-primary-text-color: #212121;
+  --wcag-secondary-text-color: #666666;
+  --wcag-disable-color: #9E9E9E;
+  --wcag-border-color: #E0E0E0;
+  --wcag-background-color: #F0F0F0;
+  --wcag-white-color: #FFF;
+
+  --btn-primary-color: #50B83C;
+  --btn-primary-hover-color: #5DC748;
+  --btn-primary-press-color: #118044;
+  --btn-primary-disabled-color: #7ebe71;
+  --btn-icon-color: #E6F1E4;
+  --btn-danger-color: #E81E1E;
+  --btn-danger-hover-color: #ef4848;
+  --btn-danger-press-color: #bf1a1a;
+  --btn-danger-disabled-color: #eb7272;
+
+  --sidebar-background: #393A3E;
+
+
+  /* toast */
+  --toast-success-color: #50B83C;
+  --toast-warning-color: #F49342;
+  --toast-error-color: #DE3618;
+  --toast-info-color: #009EEB;
+
 }
 
-/* global */
 * {
-  position: relative;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border-color: inherit;
+  font-family: 'Roboto', sans-serif;
+}
+
+html {
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--wcag-primary-text-color);
 }
 
 
 /* common */
+
+#background {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--wcag-background-color);
+}
+
+#main-container {
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+  padding-top: 56px;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+
+  background-color: var(--main-color-600);
+}
+
+#header a,
+#header i {
+  color: var(--wcag-white-color);
+}
+
+/* text */
+.font-size-1rem {
+  font-size: 1rem;
+}
+
+.font-size-12rem {
+  font-size: 1.2rem;
+}
+
+.font-size-14rem {
+  font-size: 1.4rem;
+}
+
+.font-size-15rem {
+  font-size: 1.5rem;
+}
+
+.font-size-16rem {
+  font-size: 1.6rem;
+}
+
+.font-size-18rem {
+  font-size: 1.8rem;
+}
+
+.font-size-2rem {
+  font-size: 2rem;
+}
+
+.font-size-25rem {
+  font-size: 2.5rem;
+}
+
+.text-success {
+  color: var(--btn-primary-color);
+}
+
+.text-failure {
+  color: var(--btn-danger-color);
+}
+
+/* icon */
 .m-icon {
   padding: 4px 8px;
 }

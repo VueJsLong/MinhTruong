@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple math</title>
+  <!-- css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/simpleMath.css">
+
+</head>
+
+<body>
+  <div id="background">
+    <header id="header" class="d-flex justify-content-between align-items-center p-4">
+      <span id="go-back-container">
+        <a href="/"> <i class="fa-regular fa-circle-left"></i> Quay về</a>
+      </span>
+      <div class="d-flex">
+        <div class="history-container d-flex flex-column align-items-center">
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#history-modal" title="Lịch sử">
+            <i class="fa-solid fa-clock-rotate-left font-size-14rem"></i>
+          </button>
+        </div>
+        <div class="history-container d-flex flex-column align-items-center">
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#setting-modal" title="Cài đặt">
+            <i class="fa-solid fa-gear font-size-14rem"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+    <div id="main-container" class="d-flex flex-column justify-content-between">
+      <div id="tool-container d-flex flex-column justify-content-between">
+        <div class="result-container d-flex justify-content-between">
+          <div class="success-counter d-flex flex-column align-items-center">
+            <span class="text-success font-size-1rem">Đúng</span>
+            <span class="text-success font-size-2rem">20</span>
+          </div>
+          <div id="timer-container">
+            <div class="count-down-timer d-flex justify-content-center font-size-25rem text-success">
+              10:00
+            </div>
+          </div>
+          <div class="failure-counter d-flex flex-column align-items-center">
+            <span class="text-failure font-size-1rem">Sai</span>
+            <span class="text-failure font-size-2rem">20</span>
+          </div>
+        </div>
+
+      </div>
+      <div id="question-container" class="d-flex justify-content-center">
+        <span class="question font-size-2rem m-2">22+11=</span>
+        <input class="answer-input font-size-2rem" type="number" placeholder="??" title="Nhập đáp án">
+      </div>
+      <div id="answer-container">
+        <form action="#" class="">
+          <div class="row g-2 justify-content-between">
+            <button class="answer-item col-5 d-flex align-items-center">
+              <span>A. </span>
+              <span id="answer-a">11</span>
+            </button>
+            <button class="answer-item col-5 d-flex align-items-center mx-2">
+              <span>B. </span>
+              <span id="answer-b">22</span>
+            </button>
+            <button class="answer-item col-5 d-flex align-items-center">
+              <span>C. </span>
+              <span id="answer-c">33</span>
+            </button>
+            <button class="answer-item col-5 d-flex align-items-center mx-2">
+              <span>D. </span>
+              <span id="answer-d">44</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="history-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Lịch sử</h1>
+          <div class="history-result d-flex align-items-center flex mx-4" style="gap: 8px;">
+            <span class="text-success">Đúng</span>
+            <span class="success-ratio text-success">70%</span>
+            <span class="text-failure">Sai</span>
+            <span class="failure-ratio text-failure">30%</span>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-6">
+              <table class="table table-striped table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Đúng</th>
+                  </tr>
+                </thead>
+                <tbody class="success-body">
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="col-6">
+              <table class="table table-striped table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Sai</th>
+                  </tr>
+                </thead>
+                <tbody class="failure-body">
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Đóng</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="setting-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Cài đặt</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3 row">
+            <label for="number-a-setting" class="col-sm-4 col-form-label">Phép toán</label>
+            <div class="col-sm-8">
+              <span>
+                <input type="number" id="number-a-setting" placeholder="??" style="width: 40px;">
+              </span>
+              <span class="mx-2">
+                <span class="mx-2">
+                  <input class="form-check-input" type="radio" name="operation-setting" id="operation-setting-1" checked
+                    value="+">
+                  <label class="form-check-label" for="operation-setting-1">
+                    +
+                  </label>
+                </span>
+                <span class="mx-2">
+                  <input class="form-check-input" type="radio" name="operation-setting" id="operation-setting-2"
+                    value="-">
+                  <label class="form-check-label" for="operation-setting-2">
+                    -
+                  </label>
+                </span>
+                <span class="mx-2">
+                  <input class="form-check-input" type="radio" name="operation-setting" id="operation-setting-3"
+                    value="x">
+                  <label class="form-check-label" for="operation-setting-3">
+                    x
+                  </label>
+                </span>
+                <span class="mx-2">
+                  <input class="form-check-input" type="radio" name="operation-setting" id="operation-setting-4"
+                    value="/">
+                  <label class="form-check-label" for="operation-setting-4">
+                    /
+                  </label>
+                </span>
+              </span>
+              <span>
+                <input type="number" id="number-b-setting" placeholder="??" style="width: 40px;">
+              </span>
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="timer-setting" class="col-sm-4 col-form-label">Thời gian (phút)</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="timer-setting">
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="sound-setting" class="col-sm-4 col-form-label">Âm thanh</label>
+            <div class="col-sm-8">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="sound-setting" id="sound-setting-1" checked
+                  value="1">
+                <label class="form-check-label" for="sound-setting-1">
+                  Bật
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="sound-setting" id="sound-setting-2" value="0">
+                <label class="form-check-label" for="sound-setting-2">
+                  Tắt
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+          <button type="button" class="btn btn-primary">Lưu</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- script -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+    integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script src="../assets/js/simpleMath.js"></script>
+</body>
+
+</html>

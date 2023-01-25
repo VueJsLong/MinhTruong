@@ -1,3 +1,7 @@
+#background {
+	background: linear-gradient(-90deg, #2FC5BA, #62C6C9, #2FC5BA);
+}
+
 body {
 	width: 100vw;
 	height: 100vh;
@@ -638,14 +642,14 @@ i.disabled {
 	}
 
 	section.clock div.hours::before {
-		height: 200px;
+		height: 170px;
 	}
 
 	section.clock div.minutes::before {
-		height: 245px;
+		height: 240px;
 	}
 
 	section.clock div.seconds::before {
-		height: 243px;
+		height: 245px;
 	}
 }

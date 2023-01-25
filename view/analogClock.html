@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Analog clock</title>
+  <!-- css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/analogClock.css">
+</head>
+
+<body>
+  <div id="background">
+    <header id="header" class="d-flex justify-content-between align-items-center p-4">
+      <span id="go-back-container">
+        <a href="/"> <i class="fa-regular fa-circle-left"></i> Quay về</a>
+      </span>
+    </header>
+    <div id="main-container" class="d-flex flex-column justify-content-between">
+      <!-- partial:index.partial.html -->
+      <section class="border-clock"></section>
+      <section class="clock">
+        <ul>
+          <li><i>12</i></li>
+          <li><i>1</i></li>
+          <li><i>2</i></li>
+          <li><i>3</i></li>
+          <li><i>4</i></li>
+          <li><i>5</i></li>
+          <li><i>6</i></li>
+          <li><i>7</i></li>
+          <li><i>8</i></li>
+          <li><i>9</i></li>
+          <li><i>10</i></li>
+          <li><i>11</i></li>
+        </ul>
+
+        <div class="tools">
+          <i class="m-icon fa-solid fa-eye opened-eye"></i>
+          <i class="m-icon fa-solid fa-eye-slash closed-eye"></i>
+          <i class="m-icon fa-solid fa-plus new-time"></i>
+        </div>
+
+        <!-- <output class="date"></output> -->
+
+        <div class="minutes"></div>
+        <div class="hours"></div>
+        <div class="seconds"></div>
+        <div class="cercle"></div>
+
+
+        <h2 class="time"></h2>
+    </div>
+  </div>
+
+
+  </section>
+  <!-- partial -->
+  <!-- script -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+    integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script src="../assets/js/analogClock.js"></script>
+
+</body>
+
+</html>

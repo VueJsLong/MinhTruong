@@ -1,0 +1,32 @@
+#main-container {
+  background-color: var(--wcag-white-color);
+}
+
+.answer-input {
+  width: 100px;
+  outline: unset;
+  border: unset;
+}
+
+.answer-input::placeholder {}
+
+
+.answer-item {
+  border: 1px solid var(--wcag-border-color);
+  outline: unset;
+  height: 100px;
+  padding: 16px;
+  cursor: pointer;
+
+  font-size: 1.5rem;
+  background-color: var(--wcag-white-color);
+}
+
+.answer-item:hover,
+.answer-item:focus {
+  background-color: var(--main-color-200);
+}
+
+.answer-item span+span {
+  margin-left: 8px;
+}
