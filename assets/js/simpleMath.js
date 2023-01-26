@@ -23,7 +23,7 @@ var vueInstance = new Vue({
           numberB: 10,
         },
         "/": {
-          numberA: 20,
+          numberA: 10,
           numberB: 10,
         },
         "%": {
@@ -140,6 +140,7 @@ var vueInstance = new Vue({
   },
   mounted() {
     this.initQuestion();
+    this.$refs.tabindexStart.focus();
   },
   methods: {
     /**
@@ -152,10 +153,10 @@ var vueInstance = new Vue({
         let localConfig = window.localStorage.getItem("configs");
         if (localConfig) {
           this.configs = JSON.parse(localConfig);
+        } else {
+          // Nếu không tìm thấy config từ localStorage, khởi tạo config mặc định
+          this.configs = this.defaultConfigs;
         }
-      } else {
-        // Nếu không tìm thấy từ localStorage, khởi tạo config mặc định
-        this.configs = this.defaultConfigs;
       }
 
       // Mapping currentOperation với operators config
@@ -277,10 +278,8 @@ var vueInstance = new Vue({
           }
           break;
         case "/":
-          while (firstNumber % secondNumber != 0) {
-            firstNumber = this.getRandomNumber(numberA);
-            secondNumber = this.getRandomNumber(numberB);
-          }
+          secondNumber = this.getRandomNumber(numberB);
+          firstNumber = this.getRandomNumber(numberA) * secondNumber;
           break;
         case "%":
           while (firstNumber < secondNumber) {
@@ -343,6 +342,30 @@ var vueInstance = new Vue({
       this.initQuestion();
       this.$refs.tabindexStart.focus();
       this.myAnswer = null;
+    },
+
+    /**
+     * Lưu config vào storage
+     * Created by: PVLONG(26/01/2023)
+     */
+    checkAnswerByKeyboard(event) {
+      switch (event.which) {
+        case 65:
+          this.setAnswer(this.answerList[0]);
+          break;
+        case 66:
+          this.setAnswer(this.answerList[1]);
+          break;
+        case 67:
+          this.setAnswer(this.answerList[2]);
+          break;
+        case 68:
+          this.setAnswer(this.answerList[3]);
+          break;
+        default:
+          return;
+      }
+      this.checkAnswer();
     },
 
     /**
